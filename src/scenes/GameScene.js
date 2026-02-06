@@ -50,12 +50,8 @@ export class GameScene extends Phaser.Scene {
   }
 
   createBackground() {
-    // Gradient background
+    // Gradient background using Phaser's fillGradientStyle
     const bg = this.add.graphics();
-    const gradient = bg.createLinearGradient(0, 0, 0, GAME.HEIGHT);
-    gradient.addColorStop(0, '#fff0f5');
-    gradient.addColorStop(1, '#ffe4e1');
-    bg.fillStyle(0xffffff);
     bg.fillGradientStyle(
       COLORS.BG_GRADIENT_TOP, COLORS.BG_GRADIENT_TOP,
       COLORS.BG_GRADIENT_BOTTOM, COLORS.BG_GRADIENT_BOTTOM
